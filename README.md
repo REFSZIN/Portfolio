@@ -13,23 +13,7 @@
   <!-- Badges source: https://dev.to/envoy_/150-badges-for-github-pnk -->
 </div>
 
-<h1 align="center margin 10px">Librariess<h1>
-
-- [jsonwebtoken](https://www.npmjs.com/package/express)
-- [nanoid](https://www.npmjs.com/package/express)
-- [pg](https://www.npmjs.com/package/express)
-- [string-strip-html](https://www.npmjs.com/package/express)
-- [express](https://www.npmjs.com/package/express)
-- [cors](https://www.npmjs.com/package/cors)
-- [jwt-simple](https://www.npmjs.com/package/jwt-simple)
-- [chalk](https://www.npmjs.com/package/chalk)
-- [dotenv](https://www.npmjs.com/package/dotenv)
-- [dayjs](https://www.npmjs.com/package/dayjs)
-- [postgresql](https://www.npmjs.com/package/postgres)
-- [joi](https://www.npmjs.com/package/joi)
-- [bcrypt](https://www.npmjs.com/package/bcrypt)
-- [uuid](https://www.npmjs.com/package/uuid)
-- [nodemon](https://www.npmjs.com/package/nodemon)
+<h1 align="center margin 10px">Libraries<h1>
 
 <br/>
 
