@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 ![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=REFSZIN%20&fontAlignY=40&color=gradient)
 <div align="center">
 <h1 align="center">
@@ -15,22 +16,20 @@
 
 <h1 align="center margin 10px">Librariess<h1>
 
-- [jsonwebtoken](https://www.npmjs.com/package/express)
-- [nanoid](https://www.npmjs.com/package/express)
-- [pg](https://www.npmjs.com/package/express)
-- [string-strip-html](https://www.npmjs.com/package/express)
-- [express](https://www.npmjs.com/package/express)
-- [cors](https://www.npmjs.com/package/cors)
-- [jwt-simple](https://www.npmjs.com/package/jwt-simple)
-- [chalk](https://www.npmjs.com/package/chalk)
-- [dotenv](https://www.npmjs.com/package/dotenv)
-- [dayjs](https://www.npmjs.com/package/dayjs)
+- [@angular/animations](https://www.npmjs.com/package/express)
+- [@angular/common](https://www.npmjs.com/package/express)
+- [@angular/material](https://www.npmjs.com/package/express)
+- [@angular/compiler](https://www.npmjs.com/package/express)
+- [@angular/core](https://www.npmjs.com/package/express)
+- [@angular/forms](https://www.npmjs.com/package/express)
+- [@angular/platform-browser](https://www.npmjs.com/package/cors)
+- [@angular/platform-browser-dynamic"](https://www.npmjs.com/package/jwt-simple)
+- [@angular/router](https://www.npmjs.com/package/chalk)
+- [rxjs](https://www.npmjs.com/package/dotenv)
+- [tslib](https://www.npmjs.com/package/dayjs)
 - [postgresql](https://www.npmjs.com/package/postgres)
 - [joi](https://www.npmjs.com/package/joi)
-- [bcrypt](https://www.npmjs.com/package/bcrypt)
-- [uuid](https://www.npmjs.com/package/uuid)
-- [nodemon](https://www.npmjs.com/package/nodemon)
-
+- [zone.js](https://www.npmjs.com/package/nodemon)
 <br/>
 
 # Description
@@ -40,23 +39,33 @@ Portfolio is a front-end application, in Angular + UI.
 </br>
 
 ## Run Locally
+
 Clone the project
+
 ```bash
   git clone 
 ```
+
 Go to the project directory
+
 ```bash
   cd projet
 ```
+
 Install dependencies
+
 ```bash
   npm install
 ```
+
 Start the server
+
 ```bash
   ng start
 ```
+
 Run tests
+
 ```bash
   ng test
 ```
