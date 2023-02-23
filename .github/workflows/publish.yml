@@ -1,4 +1,4 @@
-name: portfolio
+name: publish
 on: [push]
 jobs:
 publish-hello-docker-image:
@@ -9,9 +9,9 @@ steps:
 uses: docker/login-action@v1
 with:
 registry: ghcr.io
-username: ${{ refszin }}
-password: ${{ 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 }}
-- name: Build the portfolio Docker image
+username: ${{ github.actor }}
+password: ${{ secrets.GITHUB_TOKEN }}
+- name: Build the hello-docker Docker image
 run: |
        docker build . --tag ghcr.io/refwire/portfolio:latest
        docker run ghcr.io/refwire/portfolio:latest
