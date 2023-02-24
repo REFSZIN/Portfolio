@@ -71,6 +71,11 @@ Run tests
 ```bash
   ng test
 ```
+Run DOCKER IMAGE 
+
+```bash
+  docker push refwire/portfolio:latest
+```
 
 <!-- 
 // build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
