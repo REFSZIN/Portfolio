@@ -10,7 +10,7 @@
 	-webkit-transform: translateX(-50%)
 	transform: translateX(-50%)
 	height: 88px
-	background: #0b0b0b
+	background:rgba(0, 0, 0, 0.1)
 	-webkit-backdrop-filter: blur(40px)
 	backdrop-filter: blur(40px)
 	opacity: 0.8
@@ -20,8 +20,9 @@
 	position: fixed
 	top: 0
 	padding: 20px
+	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
+
 .main 
-	margin-top: 88px
 	position: absolute
 	min-width: 100%
 	min-height: 3300px
@@ -44,11 +45,42 @@
 	outline: none
 	width: 80px
 	height: 70px
-	margin: 10px
 	background-color: transparent
 
+.headername
+	width: fit-content
+	height: 100px
+	position: fixed
+	filter: invert(100%)
+	margin-left: 40px
+	left: 1%
+
+.conteinername
+	width: fit-content
+	position: fixed
+	margin-left: 40px
+	margin-top: 20px
+	margin-bottom: 20px
+	display: fixed
+	height: fit-content
+	justify-content: end
+	align-items: end
+	right: 10px
+
+.glass
+	margin-top: 40px
+	background:rgba(0, 0, 0, 0.1)
+	border-radius: 16px
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+	backdrop-filter: blur(4.9px)
+	-webkit-backdrop-filter: blur(4.9px)
+	border: 1px solid rgba(59, 201, 254, 1)
 .nav 
-	margin-right: 20px
+	display: flex
+	height: 80px
+	height: fit-content
+	justify-content: end
+	align-items: end
 
 a 
 	text-decoration: none
@@ -67,14 +99,13 @@ img
 	color: #c9d0d4 
 	font-family: 'Helvetica Neue', sans-serif
 	font-size: 46px
-	border-bottom: double #555
 
 .name
 	margin: 10px
 	font-family: var(--font-body)
 	font-weight: 600
 	font-size: 16px
-	color: #baacc2
+	color: #ece8f7
 	font-family: 'Mona', sans-serif
 	font-size: 46px
 
@@ -101,7 +132,7 @@ footer
 	position: relative
 	bottom: 0
 	left: 0
-	background: linear-gradient(180deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.28))
+	background: linear-gradient(30.0deg,#000000	76.72%,rgba(0, 0, 0, 0.8)12.21%)
 	padding: 1px 0
 
 .bg-vid 
@@ -125,13 +156,17 @@ footer
 	position: absolute
 	top: 0
 	left: 0
-	width: 50%
-	height: 1000px
+	height: 600px
 	display: flex
 	justify-content: center
 	align-items: center
-	margin-left: 50%
-
+	margin-left: 55%
+	margin-top: 200px
+	width: 28%
+	border-radius: 50%
+	outline: purple outset 6px
+	outline-offset: 9px
+	box-shadow:10px 10px 13px #001be9
 
 .content 
 	position: fixed
@@ -169,4 +204,23 @@ footer
 	align-items: center
 	padding-right: 40%
 	padding-top: 10%
-	
+
+.intoBanner
+	background-color: #FFFFFF
+	color: white
+	width: 400px
+	height: 70px
+	display: flex
+	flex-direction: column
+	flex-wrap: nowrap
+	align-content: center
+	justify-content: center
+	align-items: center
+	margin: 50px
+	color: black
+	font-family: var(--font-body)
+	font-weight: 600
+	font-size: 16px
+	font-family: 'Mona', sans-serif
+	font-size: 26px
+	cursor: pointer
