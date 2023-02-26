@@ -5,7 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
-
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css'; 
 /* 	
 
 	font-family: 'Lexend Deca', sans-serif;
@@ -132,14 +133,14 @@ body{
 	width: 7px
 }
 .hover{
-  --c: #63004b; /* the color */
+  --c: #9500ff; /* the color */
   --b: .0em;    /* border length*/
   --d: 10px;    /* the cube depth */
   
   --_s: calc(var(--d) + var(--b));
   
   color: var(--c);
-  border: solid #0000;
+  border: solid #ff000000;
   border-width: var(--b) var(--b) var(--_s) var(--_s);
   background:
     conic-gradient(at left var(--d)  bottom var(--d),
@@ -171,14 +172,12 @@ body{
 	);
 }
 .typing-demo {
-  width: 22ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  width: 18ch;
+	line-height: 90px;
+  animation: typing 2s steps(10), blink .10s step-end infinite;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
-	color: #63004b
+	color: #63004b;
 }
 
 @keyframes typing {
@@ -240,7 +239,6 @@ body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #111;
 	left: 0;
 	top: 0;
 	border-radius: 10px;
@@ -254,8 +252,8 @@ body{
 .neonText {
   color: #cdc8c8;
   text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
+      0 0 2px #fff,
+      0 0 5px #fff,
       0 0 21px #fff,
       0 0 42px rgb(187, 0, 255),
       0 0 82px rgb(75, 5, 83),
@@ -266,4 +264,55 @@ body{
 
 .neonText:hover{
 	opacity: 1;
+}
+.Text{
+	color: #cdc8c8;
+  text-shadow:
+      0 0 1px rgb(187, 0, 255),
+      0 0 2px rgb(75, 5, 83),
+      0 0 4px #0fa,
+      0 0 1px #0fa,
+      0 0 11px rgb(95, 11, 97);
+}
+:root { background-color: canvas }
+:root.theme-dark { color-scheme: dark }
+:root.theme-light { color-scheme: light }
+
+
+@supports (color-scheme: dark) {
+  :root.theme-dark {
+    color-scheme: dark;
+  }
+  :root.theme-dark .preview-iframe {
+    background-color: black;
+  }
+}
+
+@supports (color-scheme: light) {
+  :root.theme-light {
+    color-scheme: light;
+  }
+  :root.theme-light .preview-iframe {
+    background-color: white;
+  }
+}
+.preview-iframe {
+  /* canvas color depends on the inherited color-scheme */
+  background-color: canvas;
+}
+mat-card {
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
+
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
 }
