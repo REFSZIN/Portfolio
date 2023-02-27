@@ -1,3 +1,5 @@
+$medium: 900px
+
 .header 
 	max-width: 100%
 	display: flex
@@ -30,8 +32,14 @@
 	background-repeat: no-repeat
 	background-size: cover
 
-.space
+.spacee
 	padding-left: 80px
+
+.spacee
+	position: relative
+	top: 120px
+	left: 0
+	padding-right: 40px
 
 .logogif 
 	margin-left: 15px
@@ -56,7 +64,6 @@
 .conteinername
 	width: fit-content
 	position: fixed
-	margin-left: 40px
 	margin-top: 20px
 	margin-bottom: 20px
 	display: fixed
@@ -64,22 +71,25 @@
 	justify-content: end
 	align-items: end
 	right: 10px
+	@media screen and (max-width: $medium) 
+		width: 40px
+
+.hambug
+	width: 40px
 
 .glass
-	width: 360px
 	background:rgba(0, 0, 0, 0.1)
 	border-radius: 16px
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
 	backdrop-filter: blur(4.9px)
 	-webkit-backdrop-filter: blur(4.9px)
 	border: 1px solid rgba(59, 201, 254, 1)
-	margin-top: 10px
 	display: flex
 	flex-direction: column
 	align-items: center
 	justify-content: center
 	padding: 10px
-	height: 300px
+
 .nav 
 	display: flex
 	height: 80px
@@ -89,6 +99,7 @@
 
 
 img 
+	background-size: cover
 	overflow-clip-margin: content-box
 	overflow: clip
 
@@ -115,7 +126,7 @@ img
 	align-content: center
 	flex-direction: column
 	background: #07005C 
-	height: 1000px
+	height: 1200px
 
 .stacks
 	background: linear-gradient(347.4deg,#63004b -25.72%,#07005C	100.21%)
@@ -127,12 +138,15 @@ img
 	align-content: center
 	justify-content: center
 	align-items: center
-	padding-bottom: 40px
+	flex-direction: column
+	align-content: space-around
+	justify-content: space-evenly
 	padding-top: 140px
-	background-image: url("/assets/images/18.gif")
+	background-image: url("/assets/images/back.gif")
 	background-position: left top
 	background-repeat: no-repeat
 	background-size: 100% 100%
+	height: 1200px
 
 .projetos
 	background: linear-gradient(17.4deg,#190c21	22.72%,#07005C 122.21%)
@@ -172,6 +186,7 @@ footer
 	background-color: #0b0b0b
 
 .over
+	height: 600px
 	overflow: hidden
 
 .container
@@ -233,8 +248,6 @@ footer
 .intoBanner
 	background-color: #FFFFFF
 	color: white
-	width: 300px
-	height: 70px
 	display: flex
 	flex-direction: row
 	flex-wrap: nowrap
@@ -252,8 +265,6 @@ footer
 .intoSlide
 	background-color: #FFFFFF
 	color: white
-	width: 30%
-	height: 70px
 	display: flex
 	flex-direction: row
 	flex-wrap: nowrap
@@ -272,7 +283,7 @@ footer
 	position: relative
 	overflow: hidden
 	width: 100%
-	height: 1900px
+	height: 3060px
 	background-color: black
 	theme: black 
 
@@ -289,7 +300,7 @@ footer
 	width: 80%
 	margin-top: 20px
 	margin-left: 10%	
-	height: 60vh
+	height: 40vh
 	display: flex
 	flex-direction: column
 	justify-content: center
@@ -305,6 +316,18 @@ footer
 .conteiner-slide
 	position: absolute
 	top: 0
+	left: 0
+	width: 80%
+	margin-left: 10%
+	display: flex
+	flex-direction: column
+	align-content: center
+	justify-content: end
+	align-items: center
+
+.conteiner-subtitle
+	position: absolute
+	top: 440px
 	left: 0
 	width: 80%
 	margin-left: 10%
@@ -356,12 +379,15 @@ footer
 	align-items: center
 	flex-wrap: wrap
 	flex-direction: row-reverse
-	width: 100%
-	margin-top: 50px
-	margin-bottom: 50px
+	position: relative
+	bottom: 140px
+	left: 0px
 
 .indicator
 	cursor: pointer
 	position: relative
 	bottom: 36px
 	left: 47%
+
+iframe
+	user-select: none
