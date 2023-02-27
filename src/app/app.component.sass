@@ -1,14 +1,10 @@
 .header 
-	max-width: 101%
+	max-width: 100%
 	display: flex
-	z-index: 100
+	z-index: 2
 	position: fixed
 	justify-content: space-between
 	align-items: center
-	width: 100%
-	left: 50%
-	-webkit-transform: translateX(-50%)
-	transform: translateX(-50%)
 	height: 88px
 	background:rgba(0, 0, 0, 0.1)
 	-webkit-backdrop-filter: blur(40px)
@@ -19,21 +15,23 @@
 	height: -moz-fit-content
 	position: fixed
 	top: 0
-	padding: 20px
 	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
+
+.main 
+	width: 100vw
+	height: 100%
+	width: -webkit-fill-available
+	height: -webkit-fill-available
+	background: linear-gradient(180deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.28))
+
+.fundo
+	width: 100vw
+	height: 100%
+	background-repeat: no-repeat
+	background-size: cover
+
 .space
 	padding-left: 80px
-.main 
-	position: absolute
-	min-width: 100%
-	min-height: 4060px
-	height: 100%
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	overflow: hidden
-	background: linear-gradient(180deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.28))
 
 .logogif 
 	margin-left: 15px
@@ -49,11 +47,11 @@
 	background-color: transparent
 
 .headername
-	width: fit-content
+	width: 300px
 	height: 100px
 	position: fixed
 	filter: invert(100%)
-	margin-left: 40px
+	padding: 20px
 
 .conteinername
 	width: fit-content
@@ -89,9 +87,6 @@
 	justify-content: end
 	align-items: end
 
-a 
-	text-decoration: none
-	color: #fff
 
 img 
 	overflow-clip-margin: content-box
@@ -114,7 +109,11 @@ img
 	font-family: 'Mona', sans-serif
 	font-size: 46px
 
-.sobre	
+.sobre
+	display: flex
+	justify-content: center
+	align-content: center
+	flex-direction: column
 	background: #07005C 
 	height: 1000px
 
@@ -122,19 +121,29 @@ img
 	background: linear-gradient(347.4deg,#63004b -25.72%,#07005C	100.21%)
 	height: fit-content
 
-.contato	
-	background: linear-gradient(347.4deg,#07005C -34.72%,#63004b	162.21%)
-	height: 1000px
+.contato
+	display: flex
+	flex-direction: column
+	align-content: center
+	justify-content: center
+	align-items: center
+	padding-bottom: 40px
+	padding-top: 140px
+	background-image: url("/assets/images/18.gif")
+	background-position: left top
+	background-repeat: no-repeat
+	background-size: 100% 100%
 
 .projetos
 	background: linear-gradient(17.4deg,#190c21	22.72%,#07005C 122.21%)
 	height: 800px
 
 footer
-	width: 100%
-	height: 260px
+	z-index: 2
+	width: 100vw
+	height: 40px
 	display: flex
-	position: relative
+	position: fixed
 	bottom: 0
 	left: 0
 	background: linear-gradient(30deg, #000000 76.72%, rgba(0, 0, 0, 0.8) 12.21%)
@@ -153,25 +162,28 @@ footer
 	top: 0
 	left: 0
 	background-position: left top
+
 .aa
 	cursor: pointer
+
 .bar
 	position: relative
 	width: 100%
 	background-color: #0b0b0b
+
+.over
+	overflow: hidden
 
 .container
 	z-index: 100
 
 .me
 	position: absolute
-	top: 0
-	left: 0
+	top: 100px
+	left: 50%
 	display: flex
 	justify-content: center
 	align-items: center
-	margin-left: 55%
-	margin-top: 150px
 	width: 28%
 	border-radius: 50%
 	outline: purple outset 6px
@@ -179,6 +191,7 @@ footer
 	box-shadow:10px 10px 13px #001be9
 	background-image: url("/assets/images/back.gif")
 	background-position: left bottom 
+	margin-left: 60px
 
 .content 
 	position: fixed
@@ -216,7 +229,6 @@ footer
 	align-items: center
 	padding-right: 36%
 	padding-top: 120px
-	margin-top: 50px
 
 .intoBanner
 	background-color: #FFFFFF
@@ -237,15 +249,32 @@ footer
 	font-size: 26px
 	cursor: pointer
 
-mat-icon
-	margin-right: 10px
+.intoSlide
+	background-color: #FFFFFF
+	color: white
+	width: 30%
+	height: 70px
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	align-content: center
+	justify-content: center
+	align-items: center
+	color: black
+	font-family: var(--font-body)
+	font-weight: 600
+	font-size: 16px
+	font-family: 'Mona', sans-serif
+	font-size: 26px
+	cursor: pointer
 
 .conten 
 	position: relative
 	overflow: hidden
 	width: 100%
-	height: 1800px
-	background-color: canvas 
+	height: 1900px
+	background-color: black
+	theme: black 
 
 .responsive-iframe 
 	position: absolute
@@ -255,23 +284,84 @@ mat-icon
 	right: 0
 	width: 100%
 	height: 100%
-	background-color: canvas 
 
-.markdown-body > * 
-	background-color: black 
-
-.proj
+.img-carrosel
+	width: 80%
+	margin-top: 20px
+	margin-left: 10%	
+	height: 60vh
 	display: flex
 	flex-direction: column
-	width: 900px
-	height: 300px
-	overflow: hidden
-	background-color: black
-	
-.proj-img
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	border-radius: 5%
 
-.proj-p
+.icons-carrosel
+	width: 100%
+	height: 100px
+	background-color: green
 
-.proj-icon
+.conteiner-slide
+	position: absolute
+	top: 0
+	left: 0
+	width: 80%
+	margin-left: 10%
+	display: flex
+	flex-direction: column
+	align-content: center
+	justify-content: end
+	align-items: center
 
-.icon-proj
+.prev
+	cursor: pointer
+	width: 80px
+	height: 80px
+	position: absolute
+	top: 40%
+	left: 0%
+	background: none
+
+.next
+	cursor: pointer
+	width: 80px
+	height: 80px
+	position: absolute
+	top: 40%
+	right: 0%
+	background: none
+
+.glasse
+	width: 60px
+	background:rgba(0, 0, 0, 0.1)
+	border-radius: 16px
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+	backdrop-filter: blur(4.9px)
+	-webkit-backdrop-filter: blur(4.9px)
+	border: 1px solid rgba(59, 201, 254, 1)
+	margin-top: 10px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	padding: 10px
+	height: 70px
+
+.bttns
+	display: flex
+	width: 100%
+	align-content: center
+	justify-content: space-evenly
+	align-items: center
+	flex-wrap: wrap
+	flex-direction: row-reverse
+	width: 100%
+	margin-top: 50px
+	margin-bottom: 50px
+
+.indicator
+	cursor: pointer
+	position: relative
+	bottom: 36px
+	left: 47%

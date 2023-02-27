@@ -1,35 +1,38 @@
 
-  <div class="header" role="banner">
-    <img class="headername" src="assets/images/name.png" alt="gif"/> 
-    <nav class="conteinername">
-      <a href="index.html" class="nav-link tops hover Text ">Sobre</a>
-      <a href="login.html" class="nav-link tops hover Text">Projetos</a>
-      <a href="login.html" class="nav-link tops hover Text">Contato</a>
-      <button mat-icon-button [mat-menu-trigger-for]="menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu x-position="before" #menu="matMenu">
-        <button mat-menu-item>Sobre</button>
-        <button mat-menu-item>Projetos</button>
-        <button mat-menu-item>Contato</button>
-      </mat-menu>
-    </nav>
-  </div>
-  <section class="main" role="main">
+  <main class="main" role="main">
+    <header class="header" role="banner">
+      <img class="headername" src="assets/images/name.png" alt="gif"/> 
+      <nav class="conteinername">
+        <a href="index.html" class="nav-link tops hover Text ">Sobre</a>
+        <a href="login.html" class="nav-link tops hover Text">Projetos</a>
+        <a href="login.html" class="nav-link tops hover Text">Contato</a>
+        <button mat-icon-button [mat-menu-trigger-for]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu class="" x-position="before" #menu="matMenu">
+          <button class=" nav-link tops hover Text" mat-menu-item>Sobre</button>
+          <button class="tops hover Text" mat-menu-item>Projetos</button>
+          <button class="tops hover Text" mat-menu-item>Contato</button>
+        </mat-menu>
+      </nav>
+    </header>
     <article class="sobre">
       <div  id="myVideo" class="bg-vid" >
-        <img src="assets/images/fundoback.gif" type="video/mp4">
+        <img class="fundo" src="assets/images/fundoback.gif" alt="fundo" type="video/mp4">
       </div>
       <img class="me" alt="me" src="assets/images/me.png" type="image"/>
-      <div class="Banner" >
+      <div class="Banner">
         <h2 class="name neonText ">Nice to meet you</h2>
         <h2 class="name">I'm Yan Matheus</h2>
         <h2 class="name neonText">Dev Full Stack</h2>
         <h2 class="name ">UI / UX / OPS</h2>
-        <h2 class="name typing-demo space">Let’s work 🚀</h2>
+        <h2 class="name typing-demo space">Let’s work :-D</h2>
         <div class="glass">
           <a class="intoBanner glow-on-hover glass neonText"  href="https://github.com/REFSZIN" target="_blank">
             <mat-icon color = "primary">cloud_circle</mat-icon>My GitHub
+          </a>
+          <a class="intoBanner glow-on-hover glass neonText"  href="https://github.com/sponsors/REFSZIN" target="_blank">
+            💖Sponsors
           </a>
           <a class="intoBanner glow-on-hover glass neonText "  href="https://www.linkedin.com/in/yanassis/" target="_blank" >
             <mat-icon color = "primary">portrait</mat-icon>My Linkedin
@@ -41,9 +44,9 @@
       </div>
     </article>
     <article class="stacks">
-      <div class="conten ">
+      <div class="conten">
         <iframe  
-          class="responsive-iframe " 
+          class="responsive-iframe" 
           scrolling="auto" 
           title="README"
           src="https://refszin.github.io/REFSZIN/">
@@ -51,81 +54,41 @@
       </div>
     </article>
     <article class="contato">
-      <section class="grid">
-        <c-carousel [dark]="true" [wrap]="false">
-          <c-carousel-indicators></c-carousel-indicators>
+      <h3 class="name" neonText>PROJECTS</h3>
+        <c-carousel class="over" [dark]="true" [touch]="true" [wrap]="true"  [animate]="true" [interval]="15000" >
           <c-carousel-inner>
-            <c-carousel-item *ngFor="let slide of slides; index as i;">
+            <c-carousel-item class="d-flex" *ngFor="let slide of slides; index as i;">
               <img
                 [src]="slide.src"
                 alt="{{slide.title}}"
-                class="d-block w-100"
-                loading="lazy"
+                class="img-carrosel"
+                loading="smooth"
               />
-              <c-carousel-caption class="d-none d-md-block">
-                <h3>{{slide.title}}</h3>
-                <p>{{slide.subtitle}}</p>
+              <c-carousel-caption class="conteiner-slide">
+                <h3 class="name">{{slide.title}}</h3>
+                <p class>{{slide.subtitle}}</p>
               </c-carousel-caption>
+              <c-carousel-indicators class="indicator"></c-carousel-indicators>
+              <div class="bttns">
+              <a class="intoSlide glow-on-hover glass neonText"  href={{slide.repository}} target="_blank" >
+                <mat-icon color = "primary">library_books</mat-icon>Repository
+              </a>
+              <a class="intoSlide glow-on-hover glass neonText"  href={{slide.deploy}} target="_blank" >
+                <mat-icon color = "primary">open_in_new</mat-icon>Deploy
+              </a>
+              <c-carousel-control [routerLink] caption="Previous" direction="prev" class="prev">
+                <img class="tops " src="assets/images/prev.svg" alt="gif"/>
+              </c-carousel-control>
+              <c-carousel-control [routerLink] caption="Next" direction="next" class="next">
+                <img class="tops " src="assets/images/next.svg" alt="gif"/>
+              </c-carousel-control>
+              </div>
             </c-carousel-item>
           </c-carousel-inner>
-          <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
-          <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
         </c-carousel>
-        <mat-grid-list cols="2" rowHeight="1:9">
-          <mat-grid-tile>
-            <div class="proj">
-              <img class="proj-img" src=""/>
-              <p class="proj-p">
-              <div class="proj-icon">
-                <mat-icon class="icon-proj" color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-              </div>
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="proj">
-              <img class="proj-img" src=""/>
-              <p class="proj-p">
-              <div class="proj-icon">
-                <mat-icon class="icon-proj" color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-              </div>
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="proj">
-              <img class="proj-img" src=""/>
-              <p class="proj-p">
-              <div class="proj-icon">
-                <mat-icon class="icon-proj" color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-              </div>
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="proj">
-              <img class="proj-img" src=""/>
-              <p class="proj-p">
-              <div class="proj-icon">
-                <mat-icon class="icon-proj" color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-                <mat-icon color = "primary">check</mat-icon>
-              </div>
-            </div>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </section>
-    </article>
-    <footer>
-      <img  *ngIf="isShow" (click)="gotoTop()" class="tops typing-demo aa" src="assets/images/Logo.gif" alt="gif"/> 
+    </article>     
+    <footer *ngIf="isShow" (click)="gotoTop()" >
       &copy; Copyright 2023 - Refszin - Yan Mathehus
     </footer>
-  </section> 
+  </main> 
   <router-outlet></router-outlet>
