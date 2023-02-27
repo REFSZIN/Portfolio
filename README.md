@@ -37,6 +37,7 @@ Learning challenge proposal showing some of my skills and experiences in Develop
 - [postgresql](https://www.npmjs.com/package/postgres)
 - [joi](https://www.npmjs.com/package/joi)
 - [zone.js](https://www.npmjs.com/package/zone.js)
+- [CoreUI](https://www.npmjs.com/package/@coreui/angular)
 <br/>
 
 

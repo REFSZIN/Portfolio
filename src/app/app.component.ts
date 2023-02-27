@@ -25,25 +25,32 @@ export class AppComponent implements OnInit{
       behavior: 'smooth' 
     });
   }
-  constructor() { }
+  constructor() { /* document why this constructor is empty */  }
   ngOnInit(): void {
     this.slides[0] = {
       id: 0,
-      src: './assets/images/me.png',
-      title: 'First slide',
-      subtitle: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+      
     };
     this.slides[1] = {
       id: 1,
-      src: './assets/images/me.png',
-      title: 'Second slide',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
     }
     this.slides[2] = {
       id: 2,
-      src: './assets/images/me.png',
-      title: 'Third slide',
-      subtitle: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
     }
   }
 }
