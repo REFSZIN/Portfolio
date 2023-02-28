@@ -55,8 +55,8 @@
     </article>
     <article class="contato">
       <h3 class="name spacee" neonText>PROJECTS</h3>
-        <c-carousel id="Projetos" class="over" [dark]="true" [touch]="true" [wrap]="true"  [animate]="true" [interval]="000" >
-          <c-carousel-inner>
+        <c-carousel id="Projetos" class="over" [dark]="false" [touch]="true" [wrap]="true"  [animate]="false" [interval]="15000" >
+          <c-carousel-inner class="coll">
             <c-carousel-item class="d-flex item" *ngFor="let slide of slides; index as i;">
               <img
                 [src]="slide.src"
