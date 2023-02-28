@@ -55,7 +55,7 @@
     </article>
     <article class="contato">
       <h3 class="name spacee" neonText>PROJECTS</h3>
-        <c-carousel id="Projetos" class="over" [dark]="true" [touch]="true" [wrap]="true"  [animate]="true" [interval]="15000" >
+        <c-carousel id="Projetos" class="over" [dark]="true" [touch]="true" [wrap]="true"  [animate]="true" [interval]="000" >
           <c-carousel-inner>
             <c-carousel-item class="d-flex item" *ngFor="let slide of slides; index as i;">
               <img
@@ -71,7 +71,7 @@
               <c-carousel-indicators class="indicator"></c-carousel-indicators>
               <div class="bttns">
               <a class="intoSlide glow-on-hover glass neonText"  href={{slide.repository}} target="_blank" >
-                <mat-icon color = "primary">library_books</mat-icon>Repository
+                <mat-icon color = "primary">library_books</mat-icon>Github
               </a>
               <a class="intoSlide glow-on-hover glass neonText"  href={{slide.deploy}} target="_blank" >
                 <mat-icon color = "primary">open_in_new</mat-icon>Deploy
@@ -89,8 +89,8 @@
           </c-carousel-inner>
         </c-carousel>
     </article>     
-    <footer *ngIf="isShow" (click)="gotoTop()" >
-      &copy; Copyright 2023 - Refszin - Yan Matheus
+    <footer *ngIf="isShow" >
+      &copy; Copyright 2023 - Refszin - <a class="contact">Contact me</a>
     </footer>
   </main> 
   <router-outlet></router-outlet>

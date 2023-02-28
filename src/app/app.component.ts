@@ -93,7 +93,7 @@ export class AppComponent implements OnInit{
     this.slides[9] = {
       id: 9,
       src: './assets/images/tweteoo.png',
-      title: 'Tweteroo Spring 🌱',
+      title: 'Tweteroo 🌱',
       subtitle: 'Projeto back-end construção da JAVA Spring Boot API do Tweteroo',
       repository: 'https://github.com/REFSZIN/tweteroo-api-java',
       deploy: 'https://github.com/REFSZIN/tweteroo-api-java'
@@ -102,7 +102,7 @@ export class AppComponent implements OnInit{
       id: 10,
       src: './assets/images/driven.png',
       title: 'Drivent',
-      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      subtitle: 'NodeJs,Typescript, Jest para testes de integração, Prisma ORM para consultas ao banco de dados Usamos também o SCRUM.',
       repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
       deploy: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1'
     }
