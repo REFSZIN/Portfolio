@@ -12,6 +12,9 @@ export class AppComponent implements OnInit{
   title = 'Portfolio';
   isShow = false;
   topPosToStartShowing = 200;
+  Showing= 1194;
+  noShowing= 4024;
+  Inverted = false;
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
@@ -19,7 +22,7 @@ export class AppComponent implements OnInit{
       id: 0,
       src: './assets/images/driven.png',
       title: 'BACK-END: DRIVENT',
-      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend.',
       repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
       deploy: ''
     };
@@ -39,6 +42,70 @@ export class AppComponent implements OnInit{
       repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
       deploy: ''
     }
+    this.slides[3] = {
+      id: 3,
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+    }
+    this.slides[4] = {
+      id: 4,
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+    }
+    this.slides[5] = {
+      id: 5,
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+    }
+    this.slides[6] = {
+      id: 6,
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+    }
+    this.slides[7] = {
+      id: 7,
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+    }
+    this.slides[8] = {
+      id: 8,
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+    }
+    this.slides[9] = {
+      id: 9,
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+    }
+    this.slides[10] = {
+      id: 10,
+      src: './assets/images/driven.png',
+      title: 'BACK-END: DRIVENT',
+      subtitle: 'NodeJs + Typescript para construir a API, Jest para testes de integração, Prisma ORM para consultas ao banco de dados e ReactJs + StyledComponents para desenhar o frontend. Usamos também o SCRUM como metodologia para gerenciar o projeto',
+      repository: 'https://github.com/REFSZIN/projeto__calvs-drivent__p1',
+      deploy: ''
+    }
   }
   @HostListener('window:scroll')
   checkScroll() {
@@ -47,6 +114,11 @@ export class AppComponent implements OnInit{
       this.isShow = true;
     } else {
       this.isShow = false;
+    }
+    if (scrollPosition >= this.Showing && scrollPosition < this.noShowing ) {
+      this.Inverted = true;
+    } else {
+      this.Inverted = false;
     }
   }
   gotoTop() {

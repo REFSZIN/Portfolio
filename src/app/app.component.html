@@ -1,7 +1,8 @@
 
   <main class="main" role="main">
     <header class="header" role="banner">
-      <img  (click)="gotoTop()"  class="headername" src="assets/images/name.png" alt="gif"/> 
+      <img (click)="gotoTop()"  class="headernamee" src="assets/images/name.png" alt="gif"/>  
+      <img *ngIf="!Inverted" (click)="gotoTop()"  class="headername" src="assets/images/name.png" alt="gif"/>
       <nav class="conteinername">
         <div *ngIf="innerWidth >= 1024" >
           <a href="#Sobre" class="nav-link tops hover Text ">Sobre</a>
@@ -56,7 +57,7 @@
       <h3 class="name spacee" neonText>PROJECTS</h3>
         <c-carousel id="Projetos" class="over" [dark]="true" [touch]="true" [wrap]="true"  [animate]="true" [interval]="15000" >
           <c-carousel-inner>
-            <c-carousel-item class="d-flex" *ngFor="let slide of slides; index as i;">
+            <c-carousel-item class="d-flex item" *ngFor="let slide of slides; index as i;">
               <img
                 [src]="slide.src"
                 alt="{{slide.title}}"
@@ -75,12 +76,14 @@
               <a class="intoSlide glow-on-hover glass neonText"  href={{slide.deploy}} target="_blank" >
                 <mat-icon color = "primary">open_in_new</mat-icon>Deploy
               </a>
-              <c-carousel-control [routerLink] caption="Previous" direction="prev" class="prev">
-                <img class="tops " src="assets/images/prev.svg" alt="gif"/>
-              </c-carousel-control>
-              <c-carousel-control [routerLink] caption="Next" direction="next" class="next">
-                <img class="tops " src="assets/images/next.svg" alt="gif"/>
-              </c-carousel-control>
+              </div>
+              <div class="bttn">
+                <c-carousel-control [routerLink] caption="Previous" direction="prev" class="prev">
+                  <img class="tops " src="assets/images/prev.svg" alt="gif"/>
+                </c-carousel-control>
+                <c-carousel-control [routerLink] caption="Next" direction="next" class="next">
+                  <img class="tops " src="assets/images/next.svg" alt="gif"/>
+                </c-carousel-control>
               </div>
             </c-carousel-item>
           </c-carousel-inner>
