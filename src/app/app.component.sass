@@ -125,6 +125,8 @@ img
 	color: #ece8f7
 	font-family: 'Mona', sans-serif
 	font-size: 46px
+	animation: zoomIn 2s
+	--animate-repeat: 2
 	@media (min-width:320px) and (max-width: 379px)
 		font-size: 26px
 	@media (min-width:380px) and (max-width: 599px)
@@ -210,6 +212,8 @@ footer
 .aa
 	cursor: pointer
 
+.item
+
 .bar
 	position: relative
 	width: 100%
@@ -229,6 +233,7 @@ footer
 	text-align: justify
 	word-wrap: break-word
 	overflow-wrap: normal
+
 
 .container
 	z-index: 100
@@ -385,7 +390,7 @@ footer
 	height: 3060px
 	background-color: black
 	theme: black 
-	animation: fadeInUp 4s
+	animation: fadeInUp 5s
 	@media screen 
 		@media (min-width:320px) and (max-width: 379px)
 			height: 3860px
@@ -416,7 +421,7 @@ footer
 	align-items: center
 	flex-direction: column
 	border-radius: 5%
-	animation: bounceInLeft 1s 
+	animation: backInDown 1s 
 	@media screen 
 		@media (min-width:320px) and (max-width: 379px)
 			width: 300px
@@ -427,6 +432,8 @@ footer
 			width: 400px
 			margin: 20px 20px 20px 20px
 			height: 46vh
+.coll
+	height: 800px
 
 .icons-carrosel
 	width: 100%
@@ -453,6 +460,7 @@ footer
 	justify-content: end
 	align-items: center
 	font-size-adjust: 0.5
+	animation: fadeIn 2s 
 	@media screen 
 		@media (min-width:320px) and (max-width: 379px)
 			width: 60%
@@ -511,6 +519,7 @@ footer
 	bottom: 0px
 	left: 0px
 	margin: 5px
+	animation: flipInX 2s
 	@media screen 
 		@media (min-width:320px) and (max-width: 379px)
 			width: 60%
@@ -530,6 +539,7 @@ footer
 	position: relative
 	bottom: 350px
 	left: 0px
+	animation: flipInX 2s
 	@media screen 
 		@media (min-width:320px) and (max-width: 379px)
 			display: none
@@ -554,4 +564,5 @@ iframe
 	user-select: none
 
 .contact
+	cursor: pointer
 	margin-left: 5px
