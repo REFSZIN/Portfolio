@@ -1,18 +1,22 @@
-import { Component, HostListener , OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener , OnInit, ViewEncapsulation } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class AppComponent implements OnInit{
   
-  slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: '',deploy: '', repository:''});
+  slides: any[] = new Array(10).fill({id: -1, src: '', title: '', subtitle: '',deploy: '', repository:''});
   innerWidth = 1024;
   title = 'Portfolio';
   isShow = false;
   topPosToStartShowing = 200;
-  Showing= 1194;
+  Showing= 1694;
   noShowing= 4024;
   Inverted = false;
 
@@ -131,5 +135,13 @@ export class AppComponent implements OnInit{
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.innerWidth = window.innerWidth;
+  }
+  constructor(private router: Router){
+  }
+  goToPage(form:string){
+    this.router.navigate([`${form}`]);
+  }
+  ngAfterViewInit(){
+    
   }
 }
