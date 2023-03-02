@@ -1,44 +1,60 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../shared/cliente';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-const headers = new HttpHeaders({
-  'Content-Type': 'application/json'
-});
-
-const url = 'https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail';
-
+import { Injectable } from "@angular/core";
+// ...
+@Injectable()
 @Component({
   selector: 'app-forma',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.sass']
 })
-
 export class Forma implements OnInit {
-  Group:any = FormGroup;
-
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
-
+  
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  myGroup: FormGroup;
+  
   ngOnInit() {
-    this.createForm(new this.Group());
-    this.Group.controls.proof.patchValue(this.Group);
+    this.createForm(new Cliente());
   }
+  
   createForm(cliente: Cliente) {
-    this.Group = this.formBuilder.group({
-      subject_matter: new FormControl([cliente.subject_matter], Validators.minLength(2)),
-      comment: new FormControl([cliente.subject_matter], Validators.minLength(2)),
-      contact: {
-        name: new FormControl([Cliente.contact.name], Validators.minLength(2)),
-        tel: new FormControl([Cliente.contact.tel], Validators.minLength(2)),
-        email: new FormControl([Cliente.contact.email], Validators.minLength(2))
-      }
-    })
+    this.myGroup = this.fb.group({
+      subject_matter: new FormControl(cliente.subject_matter),
+      comment: new FormControl(cliente.comment),
+      contact: this.fb.group({
+        name: new FormControl(cliente.contact.name),
+        tel: new FormControl(cliente.contact.tel),
+        email: new FormControl(cliente.contact.email)
+      })
+    });
   }
   onSubmit() {
-    this.http.post(url, this.Group, { headers }).subscribe((response) => {
-      console.log("Email: " + response);
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
     });
-    this.Group.reset(new Cliente());
+    const url = 'https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail';
+    console.log(url, this.myGroup.value, headers)
+    try {
+      this.postData().subscribe((response) => {
+        console.log("Email: " + response);
+      }, (error) => {
+        console.error("Erro ao enviar e-mail: ", error);
+      });
+    } catch (error) {
+      console.error("Erro ao enviar e-mail: ", error);
+    }
+    this.myGroup.reset(new Cliente());
+  }
+  
+  postData() {
+    const url = 'https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail';
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    });
+    return this.http.post<any>(url, this.myGroup.value, { headers });
   }
 }

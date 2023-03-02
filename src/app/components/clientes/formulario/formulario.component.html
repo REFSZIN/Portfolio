@@ -1,28 +1,28 @@
-<div class="back">
-<form [formGroup]="Group" class="forme" (ngSubmit)="onSubmit()">
+  <div class="back">
+<form *ngIf="myGroup" [formGroup]="myGroup" class="forme">
   <div class="form-check forme-campo">Vamos Conversar</div>
   <div class="form-group forme-campo">
     <label for="assunto">Assunto</label>
-    <input type="text" class="form-control inputs" name="assunto" id="assunto" formControlName="assunto">
+    <input type="text" class="form-control inputs" name="assunto" id="assunto" formControlName="subject_matter">
   </div>
   <div class="form-group forme-campo">
     <label for="observacao">Observação</label>
-    <textarea class="form-control observacao" rows="4" name="observacao" id="observacao" formControlName="observacao"></textarea>
+    <textarea class="form-control observacao" rows="4" name="observacao" id="observacao" formControlName="comment"></textarea>
   </div>
-  <div class="form-group">
-    <div class="form-check forme-campo">
+  <div class="form-group" formGroupName="contact">
+    <div class="form-control  forme-campo">
       <label class="form-control" for="masculino">Nome</label>
-      <input class="form-check-input inputs" type="text" name="contato" id="nome" formControlName="nome">
+      <input class="form-control  inputs" type="text" name="name" id="name" formControlName="name">
     </div>
-    <div class="form-check forme-campo">
+    <div class="form-control  forme-campo">
       <label class="form-control" for="feminino">E-mail</label>
-      <input class="form-check-input inputs" type="text" name="contato" id="email" formControlName="email">
+      <input class="form-control  inputs" type="text" name="email" id="email" formControlName="email">
     </div>
-    <div class="form-check forme-campo">
+    <div class="form-control forme-campo">
       <label class="form-control" for="feminino">Telefone</label>
-      <input class="form-check-input inputs" type="text" name="contato" id="telefone"  formControlName="telefone">
+      <input class="form-control  inputs" type="text" name="tel" id="tel"  formControlName="tel">
     </div>
   </div>
-  <input type="submit" class="btn btn-primary forme-title" value="Enviar">
+  <input (click)="onSubmit()" type="submit" class="btn btn-primary forme-title" value="Enviar">
 </form>
 </div>
