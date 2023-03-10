@@ -50,7 +50,7 @@ export class Forma implements OnInit {
   }
   
   postData() {
-    const url = 'https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail';
+    const url = 'http://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail';
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*'
